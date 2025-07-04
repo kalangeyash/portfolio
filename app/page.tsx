@@ -12,7 +12,7 @@ export default function Home() {
         <div className="text-white text-4xl font-bold">
             My name is Yash Kalange
         </div>
-        <div className="text-white text-4xl font-bold">
+        <div className="text-gray-400 text-3xl font-bold">
             I am a Computer Engineer Graduate
         </div>
       </div>
