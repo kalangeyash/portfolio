@@ -4,7 +4,8 @@ import Silk from "./components/Silk";
 
 export default function Home() {
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div>
+      <div className="relative h-screen w-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Silk />
       </div>
@@ -16,6 +17,10 @@ export default function Home() {
             I am a Computer Engineer Graduate
         </div>
       </div>
+    </div>
+    <div className="h-screen w-screen bg-black">
+
+    </div>
     </div>
   );
 }
