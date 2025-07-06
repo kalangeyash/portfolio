@@ -42,7 +42,7 @@ export default function Home() {
           {/* Right Side - Liquid Chrome Component */}
           <div className="flex-1 h-full">
             <LiquidChrome 
-              baseColor={[0.137, 0.133, 0.165]}
+              baseColor={[0.05, 0.05, 0.07]}
               speed={0.3}
               amplitude={0.4}
               frequencyX={2}
