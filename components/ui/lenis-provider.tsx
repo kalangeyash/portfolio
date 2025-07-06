@@ -21,6 +21,9 @@ export function LenisProvider({ children }: LenisProviderProps) {
       infinite: false,
     });
 
+    // Make Lenis instance available globally
+    (window as any).lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -30,6 +33,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
 
     return () => {
       lenis.destroy();
+      delete (window as any).lenis;
     };
   }, []);
 

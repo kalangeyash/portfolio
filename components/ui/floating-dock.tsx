@@ -11,7 +11,8 @@ import {
   useTransform,
 } from "motion/react";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import Lenis from "lenis";
 
 export const FloatingDock = ({
   items,
@@ -123,6 +124,31 @@ function IconContainer({
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+
+  useEffect(() => {
+    // Get the Lenis instance from the provider
+    const lenisInstance = (window as any).lenis;
+    if (lenisInstance) {
+      setLenis(lenisInstance);
+    }
+  }, []);
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement && lenis) {
+        const targetPosition = targetElement.offsetTop;
+        lenis.scrollTo(targetPosition, {
+          duration: 2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      }
+    }
+  };
 
   let distance = useTransform(mouseX, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -165,7 +191,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <a href={href} onClick={handleClick}>
       <motion.div
         ref={ref}
         style={{ width, height }}
