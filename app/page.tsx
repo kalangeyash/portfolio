@@ -79,6 +79,20 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-    </div>
+      <motion.div
+        id="projects"
+        className="h-screen w-screen bg-black"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="flex h-full w-full">
+          {/* Left Side - About Me */}
+          <motion.div
+            className="flex-1 flex flex-col justify-center px-16"
+            initial={{ opacity: 0, x: -40 }}
+            </div>
+    </motion.div>
   );
 }
