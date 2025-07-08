@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <div
         id="home"
-        className="relative h-screen w-screen overflow-hidden"
+        className="relative h-screen w-full overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
           <Silk />
@@ -24,13 +24,12 @@ export default function Home() {
           <div className="text-gray-400 text-3xl font-bold">
             I am a Computer Engineer Graduate
           </div>
-                  </motion.div>
-        </div>
-      
+        </motion.div>
+      </div>
       {/* About Me Section with 3D Component */}
       <motion.div
         id="about"
-        className="h-screen w-screen bg-black"
+        className="h-screen w-full bg-black"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -79,20 +78,34 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+      {/* Projects Section */}
       <motion.div
         id="projects"
-        className="h-screen w-screen bg-black"
+        className="h-screen w-full bg-black"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="flex h-full w-full">
-          {/* Left Side - About Me */}
           <motion.div
             className="flex-1 flex flex-col justify-center px-16"
             initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
+            <div className="text-white text-4xl font-bold mb-8">
+              Projects  
             </div>
-    </motion.div>
+            <div className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+              <p className="mb-6">
+                Here are some of the projects I've worked on:
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 }
