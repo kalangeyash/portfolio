@@ -106,6 +106,18 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+      {/* Skills Section */}
+      <motion.div
+        id="skills"
+        className="h-screen w-full bg-black"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        {/* Your skills content here */}  
+        
+      </motion.div>
     </div>
   );
 }
