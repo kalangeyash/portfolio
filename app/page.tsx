@@ -98,10 +98,37 @@ export default function Home() {
             <div className="text-white text-4xl font-bold mb-8">
               Projects  
             </div>
-            <div className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+            <div className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
               <p className="mb-6">
                 Here are some of the projects I've worked on:
               </p>
+            </div>
+            {/* Project Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Project 1 */}
+              <div className="bg-zinc-900 rounded-xl p-6 shadow-lg border border-zinc-800">
+                <div className="text-white text-2xl font-semibold mb-2">AI Planner</div>
+                <div className="text-gray-400 mb-4">AI-powered daily planning tool that helps users organize tasks and optimize productivity. Built with Next.js, TypeScript, and OpenAI API.</div>
+                <a href="#" className="text-blue-400 hover:underline">View Project</a>
+              </div>
+              {/* Project 2 */}
+              <div className="bg-zinc-900 rounded-xl p-6 shadow-lg border border-zinc-800">
+                <div className="text-white text-2xl font-semibold mb-2">Realtime Collab</div>
+                <div className="text-gray-400 mb-4">A real-time collaborative platform for teams to edit documents together. Uses React, Node.js, WebSockets, and MongoDB.</div>
+                <a href="#" className="text-blue-400 hover:underline">View Project</a>
+              </div>
+              {/* Project 3 */}
+              <div className="bg-zinc-900 rounded-xl p-6 shadow-lg border border-zinc-800">
+                <div className="text-white text-2xl font-semibold mb-2">Portfolio Website</div>
+                <div className="text-gray-400 mb-4">Personal portfolio built with Next.js, Framer Motion, and Three.js, showcasing projects and skills with interactive UI.</div>
+                <a href="#" className="text-blue-400 hover:underline">View Project</a>
+              </div>
+              {/* Project 4 */}
+              <div className="bg-zinc-900 rounded-xl p-6 shadow-lg border border-zinc-800">
+                <div className="text-white text-2xl font-semibold mb-2">E-commerce Platform</div>
+                <div className="text-gray-400 mb-4">Full-stack e-commerce app with product catalog, cart, and checkout. Built using React, Node.js, and PostgreSQL.</div>
+                <a href="#" className="text-blue-400 hover:underline">View Project</a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -115,9 +142,89 @@ export default function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Your skills content here */}  
-        
+        <div className="flex flex-col items-center justify-center h-full w-full px-8">
+          <div className="text-white text-4xl font-bold mb-8">Skills</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl w-full">
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">React</span>
+              <span className="text-gray-400">Frontend Library</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">Next.js</span>
+              <span className="text-gray-400">React Framework</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">TypeScript</span>
+              <span className="text-gray-400">Typed JavaScript</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">Node.js</span>
+              <span className="text-gray-400">Backend Runtime</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">MongoDB</span>
+              <span className="text-gray-400">NoSQL Database</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">PostgreSQL</span>
+              <span className="text-gray-400">SQL Database</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">Framer Motion</span>
+              <span className="text-gray-400">Animation Library</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold mb-2">Three.js</span>
+              <span className="text-gray-400">3D Graphics</span>
+            </div>
+          </div>
+        </div>
       </motion.div>
+      {/* Contact Section */}
+      <motion.div
+        id="contact"
+        className="h-screen w-full bg-black"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="flex flex-col items-center justify-center h-full w-full px-8">
+          <div className="text-white text-4xl font-bold mb-8">Contact</div>
+          <div className="bg-zinc-900 rounded-xl p-8 shadow-lg border border-zinc-800 max-w-lg w-full">
+            <form className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                rows={4}
+                required
+              />
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+            <div className="text-gray-400 text-center mt-6">
+              Or email me at <a href="mailto:yashkalange@gmail.com" className="text-blue-400 hover:underline">yashkalange@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+        
     </div>
   );
 }
