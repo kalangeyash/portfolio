@@ -190,37 +190,56 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="flex flex-col items-center justify-center h-full w-full px-8">
-          <div className="text-white text-4xl font-bold mb-8">Contact</div>
-          <div className="bg-zinc-900 rounded-xl p-8 shadow-lg border border-zinc-800 max-w-lg w-full">
-            <form className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                required
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                required
-              />
-              <textarea
-                placeholder="Your Message"
-                className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                rows={4}
-                required
-              />
+          <div className="text-blue-400 text-lg font-semibold mb-2 tracking-wide uppercase">Get in Touch</div>
+          <div className="text-white text-4xl font-bold mb-2">Contact</div>
+          <div className="text-gray-400 text-center mb-8 max-w-xl">
+            I’m always open to discussing new opportunities, collaborations, or just chatting about tech. Fill out the form below or connect with me directly.
+          </div>
+          <div className="bg-zinc-900 rounded-2xl p-10 shadow-2xl border border-zinc-800 max-w-lg w-full">
+            {/* Success message placeholder */}
+            {/* <div className="bg-green-600 text-white rounded p-3 mb-4 text-center">Thank you for reaching out! I'll get back to you soon.</div> */}
+            <form className="flex flex-col gap-6">
+              <div className="flex flex-col gap-1">
+                <label htmlFor="name" className="text-gray-300 text-sm font-medium">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700 focus:border-blue-400"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="email" className="text-gray-300 text-sm font-medium">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Your Email"
+                  className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700 focus:border-blue-400"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="message" className="text-gray-300 text-sm font-medium">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  className="bg-zinc-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700 focus:border-blue-400"
+                  rows={4}
+                  required
+                />
+              </div>
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded transition-colors"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded transition-colors shadow-md mt-2"
               >
                 Send Message
               </button>
             </form>
-            <div className="text-gray-400 text-center mt-6">
+            <div className="text-gray-400 text-center mt-8 mb-2">
               Or email me at <a href="mailto:yashkalange@gmail.com" className="text-blue-400 hover:underline">yashkalange@gmail.com</a>
             </div>
+            
           </div>
         </div>
       </motion.div>
