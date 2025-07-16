@@ -201,38 +201,63 @@ export default function Home() {
           <div className="text-white text-4xl font-bold mb-8">Skills</div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl w-full">
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">React</span>
-              <span className="text-gray-400">Frontend Library</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">React</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">Frontend Library</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">Next.js</span>
-              <span className="text-gray-400">React Framework</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">Next.js</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">React Framework</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">TypeScript</span>
-              <span className="text-gray-400">Typed JavaScript</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">TypeScript</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">Typed JavaScript</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">Node.js</span>
-              <span className="text-gray-400">Backend Runtime</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">Node.js</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">Backend Runtime</span>  */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">MongoDB</span>
-              <span className="text-gray-400">NoSQL Database</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">MongoDB</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">NoSQL Database</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">PostgreSQL</span>
-              <span className="text-gray-400">SQL Database</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">PostgreSQL</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">SQL Database</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">Framer Motion</span>
-              <span className="text-gray-400">Animation Library</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">Framer Motion</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">Animation Library</span> */}
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-white text-2xl font-semibold mb-2">Three.js</span>
-              <span className="text-gray-400">3D Graphics</span>
+              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
+                <span className="relative z-10">Three.js</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
+              </button>
+              {/* <span className="text-gray-400">3D Graphics</span> */}
             </div>
           </div>
+
         </div>
       </motion.div>
       {/* Contact Section */}
@@ -302,3 +327,4 @@ export default function Home() {
     </div>
   );
 }
+ 
