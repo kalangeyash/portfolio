@@ -319,6 +319,9 @@ export default function Home() {
             <div className="text-gray-400 text-center mt-8 mb-2">
               Or email me at <a href="mailto:yashkalange@gmail.com" className="text-blue-400 hover:underline">yashkalange@gmail.com</a>
             </div>
+            <motion.div>
+                
+            </motion.div>
             
           </div>
         </div>
