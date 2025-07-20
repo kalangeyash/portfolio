@@ -4,13 +4,15 @@ import Silk from "./components/Silk";
 import LiquidChrome from "@/components/liquid-chrome";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Skill from "./components/skill/Skill";
+import { SKILLS_DATA } from "./data/skills";
 
 export default function Home() {
   return (
     <div>
       <div
         id="home"
-        className="relative h-screen w-full overflow-hidden"
+        className="flex  relative h-[90vh] w-full overflow-hidden p-36"
       >
         <div className="absolute inset-0 z-0">
           <Silk />
@@ -20,13 +22,17 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex flex-col items-center justify-center h-full w-full">
           <div className="text-white text-4xl font-bold">
-            My name is Yash Kalange
+            Yash Kalange | Computer Engineer
           </div>
-          <div className="text-gray-400 text-3xl font-bold">
-            I am a Computer Engineer Graduate
+          <div className="text-gray-400 text-xl font-bold w-2xl h-max mt-10">
+          I’m a software developer focused on building scalable, user-friendly web applications. Skilled in ReactJS, NextJS, TypeScript, and Node.js, with strong expertise in JavaScript, HTML, CSS, and databases like MongoDB and PostgreSQL. I enjoy crafting clean, efficient code and delivering responsive, full-stack solutions.
           </div>
         </motion.div>
+        
+
       </div>
+      {/* Skills Section */}
+      <Skill skills={SKILLS_DATA}/>
       {/* About Me Section with 3D Component */}
       <motion.div
         id="about"
@@ -188,78 +194,8 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      {/* Skills Section */}
-      <motion.div
-        id="skills"
-        className="h-screen w-full bg-black"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div className="flex flex-col items-center justify-center h-full w-full px-8">
-          <div className="text-white text-4xl font-bold mb-8">Skills</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl w-full">
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">React</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">Frontend Library</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">Next.js</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">React Framework</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">TypeScript</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">Typed JavaScript</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">Node.js</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">Backend Runtime</span>  */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">MongoDB</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">NoSQL Database</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">PostgreSQL</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">SQL Database</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">Framer Motion</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">Animation Library</span> */}
-            </div>
-            <div className="flex flex-col items-center">
-              <button className="relative overflow-hidden px-6 py-2 rounded-lg font-semibold text-[color:var(--primary-foreground)] bg-[color:var(--primary)] shadow-lg group border border-[color:var(--primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)]">
-                <span className="relative z-10">Three.js</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--secondary)] to-[color:var(--accent)] opacity-15 blur-sm animate-shimmer" />
-              </button>
-              {/* <span className="text-gray-400">3D Graphics</span> */}
-            </div>
-          </div>
 
-        </div>
-      </motion.div>
+
       {/* Contact Section */}
       <motion.div
         id="contact"
