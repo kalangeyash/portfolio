@@ -10,9 +10,10 @@ import { SKILLS_DATA } from "./data/skills";
 export default function Home() {
   return (
     <div>
+      {/* Hero Section */}
       <div
         id="home"
-        className="flex  relative h-[90vh] w-full overflow-hidden p-36"
+        className="flex  relative h-screen w-full overflow-hidden p-36"
       >
         <div className="absolute inset-0 z-0">
           <Silk />
@@ -28,11 +29,16 @@ export default function Home() {
           I’m a software developer focused on building scalable, user-friendly web applications. Skilled in ReactJS, NextJS, TypeScript, and Node.js, with strong expertise in JavaScript, HTML, CSS, and databases like MongoDB and PostgreSQL. I enjoy crafting clean, efficient code and delivering responsive, full-stack solutions.
           </div>
         </motion.div>
-        
-
       </div>
-      {/* Skills Section */}
-      <Skill skills={SKILLS_DATA}/>
+      {/* Skills Section with Silk background */}
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Silk />
+        </div>
+        <div className="relative z-10">
+          <Skill skills={SKILLS_DATA}/>
+        </div>
+      </div>
       {/* About Me Section with 3D Component */}
       <motion.div
         id="about"
