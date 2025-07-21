@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import SkillPill, {
     type SkillPillProps,
@@ -15,27 +15,29 @@ export default function Skill({ skills }: SkillsShowcaseProps) {
     return (
         <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
             <div className="relative mx-auto max-w-7xl">
-                <h2 className="text-xl font-semibold text-accent sm:text-4xl">
+                <h2 className="text-xl font-semibold text-neutral-100 sm:text-4xl">
                     Skills
                 </h2>
                 {skills.map((section) => (
-                    <AnimatePresence key={section.sectionName}>
-                        <div className="mt-4">
-                            <span className="text-xs font-semibold text-foreground sm:text-sm">
-                                {section.sectionName}
-                            </span>
-                            <div className="mt-2 flex flex-wrap gap-4 text-xl text-accent-foreground">
-                                {section.skills.map((pill, index) => (
-                                    <div
-                                        key={`lang-${index}`}
-                                        className="-z-20"
-                                    >
-                                        <SkillPill {...pill} />
-                                    </div>
-                                ))}
-                            </div>
+                    <div key={section.sectionName} className="mt-4">
+                        <span className="text-xs font-semibold text-neutral-400 sm:text-sm">
+                            {section.sectionName}
+                        </span>
+                        <div className="mt-2 flex flex-wrap gap-4">
+                            {section.skills.map((pill, index) => (
+                                <motion.div
+                                    key={`lang-${index}`}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                                    className="-z-20"
+                                >
+                                    <SkillPill {...pill} />
+                                </motion.div>
+                            ))}
                         </div>
-                    </AnimatePresence>
+                    </div>
                 ))}
             </div>
         </section>
