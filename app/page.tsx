@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import Skill from "./components/skill/Skill";
 import { SKILLS_DATA } from "./data/skills";
+import { PROJECTS } from "./data/projects";
 
 export default function Home() {
   return (
@@ -118,84 +119,30 @@ export default function Home() {
             </div>
             {/* Project Cards with Image, Details, and Tech Stack */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Project 1 */}
-              <div className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
-                <Image
-                  src="https://api.microlink.io/?url=https://project-planner-ten-mu.vercel.app/&embed=screenshot.url&meta=false"
-                  alt="AI Planner Preview"
-                  width={600}
-                  height={300}
-                  className="w-full h-48 object-cover bg-zinc-800 rounded-t-xl"
-                />
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="text-white text-2xl font-semibold mb-2">AI Planner</div>
-                  <div className="text-gray-400 mb-4">AI-powered daily planning tool that helps users organize tasks and optimize productivity. Built with Next.js, TypeScript, and OpenAI API.</div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-blue-900 text-blue-300 px-2 py-1 rounded text-xs font-medium">Next.js</span>
-                    <span className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs font-medium">TypeScript</span>
-                    <span className="bg-purple-900 text-purple-300 px-2 py-1 rounded text-xs font-medium">OpenAI API</span>
+              {PROJECTS.slice(0, 3).map((project, idx) => (
+                <div key={project.title} className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    width={600}
+                    height={300}
+                    className="w-full h-48 object-cover bg-zinc-800 rounded-t-xl"
+                  />
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="text-white text-2xl font-semibold mb-2">{project.title}</div>
+                    <div className="text-gray-400 mb-4">{project.description}</div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech) => (
+                        <span key={tech} className="bg-blue-900 text-blue-300 px-2 py-1 rounded text-xs font-medium">{tech}</span>
+                      ))}
+                    </div>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline mt-auto">View Project</a>
                   </div>
-                  <a href="https://project-planner-ten-mu.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline mt-auto">View Project</a>
                 </div>
-              </div>
-              {/* Project 2 */}
-              <div className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
-                <img
-                  src="https://api.microlink.io/?url=https://devs-canvas.vercel.app/gi&embed=screenshot.url&meta=false"
-                  alt="Realtime Collab Preview"
-                  className="w-full h-48 object-cover bg-zinc-800"
-                  onError={(e) => { e.currentTarget.src = '/file.svg'; }}
-                />
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="text-white text-2xl font-semibold mb-2">Realtime Collab</div>
-                  <div className="text-gray-400 mb-4">A real-time collaborative platform for teams to edit documents together. Uses React, Node.js, WebSockets, and MongoDB.</div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-blue-900 text-blue-300 px-2 py-1 rounded text-xs font-medium">React</span>
-                    <span className="bg-green-900 text-green-300 px-2 py-1 rounded text-xs font-medium">Node.js</span>
-                    <span className="bg-yellow-900 text-yellow-300 px-2 py-1 rounded text-xs font-medium">WebSockets</span>
-                    <span className="bg-green-800 text-green-200 px-2 py-1 rounded text-xs font-medium">MongoDB</span>
-                  </div>
-                  <a href="https://realtimecollab.yashkalange.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline mt-auto">View Project</a>
-                </div>
-              </div>
-              {/* Project 3 */}
-              <div className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
-                <img
-                  src="https://api.microlink.io/?url=https://yashkalange.com&embed=screenshot.url&meta=false"
-                  alt="Portfolio Website Preview"
-                  className="w-full h-48 object-cover bg-zinc-800"
-                  onError={(e) => { e.currentTarget.src = '/file.svg'; }}
-                />
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="text-white text-2xl font-semibold mb-2">Portfolio Website</div>
-                  <div className="text-gray-400 mb-4">Personal portfolio built with Next.js, Framer Motion, and Three.js, showcasing projects and skills with interactive UI.</div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-blue-900 text-blue-300 px-2 py-1 rounded text-xs font-medium">Next.js</span>
-                    <span className="bg-pink-900 text-pink-300 px-2 py-1 rounded text-xs font-medium">Framer Motion</span>
-                    <span className="bg-indigo-900 text-indigo-300 px-2 py-1 rounded text-xs font-medium">Three.js</span>
-                  </div>
-                  <a href="https://yashkalange.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline mt-auto">View Project</a>
-                </div>
-              </div>
-              {/* Project 4 */}
-              <div className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
-                <img
-                  src="https://api.microlink.io/?url=https://ecommerce.yashkalange.com&embed=screenshot.url&meta=false"
-                  alt="E-commerce Platform Preview"
-                  className="w-full h-48 object-cover bg-zinc-800"
-                  onError={(e) => { e.currentTarget.src = '/file.svg'; }}
-                />
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="text-white text-2xl font-semibold mb-2">E-commerce Platform</div>
-                  <div className="text-gray-400 mb-4">Full-stack e-commerce app with product catalog, cart, and checkout. Built using React, Node.js, and PostgreSQL.</div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-blue-900 text-blue-300 px-2 py-1 rounded text-xs font-medium">React</span>
-                    <span className="bg-green-900 text-green-300 px-2 py-1 rounded text-xs font-medium">Node.js</span>
-                    <span className="bg-blue-800 text-blue-200 px-2 py-1 rounded text-xs font-medium">PostgreSQL</span>
-                  </div>
-                  <a href="https://ecommerce.yashkalange.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline mt-auto">View Project</a>
-                </div>
-              </div>
+              ))}
+            </div>
+            <div className="flex justify-center mt-8">
+              <a href="/project" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition-colors shadow-md">More Projects</a>
             </div>
           </motion.div>
         </div>
