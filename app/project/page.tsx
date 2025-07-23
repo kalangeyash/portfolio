@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { PROJECTS } from '../data/projects';
 
+
 export default function ProjectPage() {
   return (
     <div className="min-h-screen w-full bg-black py-20 px-4">

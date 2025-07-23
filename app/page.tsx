@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Skill from "./components/skill/Skill";
 import { SKILLS_DATA } from "./data/skills";
 import { PROJECTS } from "./data/projects";
+import { RippleButton } from "../components/magicui/ripple-button";
 
 export default function Home() {
   return (
@@ -40,17 +41,17 @@ export default function Home() {
           <Skill skills={SKILLS_DATA}/>
         </div>
       </div>
-      {/* About Me Section with 3D Component */}
+      {/* My Projects Section with Liquid Chrome Component */}
       <motion.div
-        id="about"
-        className="h-screen w-full bg-black"
+        id="my-projects"
+        className="h-lvh w-full bg-black pt-16"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="flex h-full w-full">
-          {/* Left Side - About Me */}
+          {/* Left Side - My Projects */}
           <motion.div
             className="flex-1 flex flex-col justify-center px-16"
             initial={{ opacity: 0, x: -40 }}
@@ -59,67 +60,15 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <div className="text-white text-4xl font-bold mb-8">
-              About Me
-            </div>
-            <div className="text-gray-400 text-lg leading-relaxed max-w-2xl">
-              <p className="mb-6">
-                A Computer Engineering graduate with a strong passion for building modern, scalable, and user-focused web applications. With hands-on experience in technologies like React, Next.js, TypeScript, Node.js, MongoDB, and PostgreSQL, I enjoy bringing ideas to life through clean code and thoughtful design.
-              </p>
-              <p className="mb-6">
-                Throughout my academic and personal projects, I've developed full-stack applications ranging from AI-powered planning tools to real-time collaborative platforms. My approach combines technical problem-solving with a focus on performance, usability, and maintainability.
-              </p>
-              <p>
-                I constantly explore new tools and frameworks to stay updated in this fast-evolving industry. I'm currently looking for opportunities where I can contribute to impactful products, learn from experienced teams, and grow as a software developer.
-              </p>
-            </div>
-          </motion.div>
-          {/* Right Side - Liquid Chrome Component */}
-          <motion.div
-            className="flex-1 h-full"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          >
-            <LiquidChrome 
-              baseColor={[0.05, 0.05, 0.07]}
-              speed={0.3}
-              amplitude={0.4}
-              frequencyX={2}
-              frequencyY={3}
-              interactive={true}
-            />
-          </motion.div>
-        </div>
-      </motion.div>
-      {/* Projects Section */}
-      <motion.div
-        id="projects"
-        className="h-screen w-full bg-black"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div className="flex h-full w-full">
-          <motion.div
-            className="flex-1 flex flex-col justify-center px-16"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          >
-            <div className="text-white text-4xl font-bold mb-8">
-              Projects  
+              My Projects
             </div>
             <div className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
               <p className="mb-6">
-                Here are some of the projects I've worked on:
+                Here are some of my top projects:
               </p>
             </div>
-            {/* Project Cards with Image, Details, and Tech Stack */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {PROJECTS.slice(0, 3).map((project, idx) => (
+              {PROJECTS.slice(0, 3).map((project) => (
                 <div key={project.title} className="bg-zinc-900 rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
                   <Image
                     src={project.image}
@@ -145,8 +94,26 @@ export default function Home() {
               <a href="/project" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition-colors shadow-md">More Projects</a>
             </div>
           </motion.div>
+          {/* Right Side - Liquid Chrome Component */}
+          <motion.div
+            className="flex-1 h-full"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          >
+            <LiquidChrome 
+              baseColor={[0.05, 0.05, 0.07]}
+              speed={0.3}
+              amplitude={0.4}
+              frequencyX={2}
+              frequencyY={3}
+              interactive={true}
+            />
+          </motion.div>
         </div>
       </motion.div>
+
 
 
       {/* Contact Section */}
@@ -198,12 +165,13 @@ export default function Home() {
                   required
                 />
               </div>
-              <button
+              <RippleButton
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded transition-colors shadow-md mt-2"
+                className="bg-black-800 hover:bg-grey-600 text-white font-normal py-2 rounded transition-colors shadow-md mt-2"
+                rippleColor="#fff"
               >
                 Send Message
-              </button>
+              </RippleButton>
             </form>
             <div className="text-gray-400 text-center mt-8 mb-2">
               Or email me at <a href="mailto:yashkalange@gmail.com" className="text-blue-400 hover:underline">yashkalange@gmail.com</a>
