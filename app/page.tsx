@@ -186,7 +186,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
             >
-              {PROJECTS.slice(0, 3).map((project, index) => (
+              {PROJECTS.slice(0, 3).map((project) => (
                 <motion.div 
                   key={project.title} 
                   variants={itemVariants}
@@ -298,11 +298,11 @@ export default function Home() {
               Get in Touch
             </div>
             <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center">
-              Let's Create Something <span className="text-blue-400">Amazing</span>
+              Lets Create Something <span className="text-blue-400">Amazing</span>
             </div>
             <div className="text-gray-300 text-center mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-xl text-sm sm:text-base px-4 leading-relaxed">
-              I'm always open to discussing new opportunities, collaborations, or just chatting about tech. 
-              Let's bring your ideas to life.
+              I am always open to discussing new opportunities, collaborations, or just chatting about tech. 
+              Lets bring your ideas to life.
             </div>
           </motion.div>
 
