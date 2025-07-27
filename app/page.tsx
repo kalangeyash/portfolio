@@ -132,11 +132,19 @@ export default function Home() {
       </div>
 
       {/* Skills Section with enhanced design */}
+      <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+        </div>
       <div className="relative w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Silk />
         </div>
         <div className="absolute inset-0 z-5 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-106 h-96 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-106 h-96 bg-purple-500 rounded-full blur-3xl" />
+        </div>
         <div className="relative z-10 py-16 sm:py-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
