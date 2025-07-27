@@ -9,6 +9,7 @@ import { SKILLS_DATA } from "./data/skills";
 import { PROJECTS } from "./data/projects";
 import { RippleButton } from "../components/magicui/ripple-button";
 import { ArrowDown, ExternalLink, Mail, Github, Linkedin, Code2, Sparkles } from "lucide-react";
+import { circOut } from "framer-motion";
 
 export default function Home() {
   const containerVariants = {
@@ -29,7 +30,7 @@ export default function Home() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: circOut
       }
     }
   };
@@ -51,7 +52,7 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.17, 0.67, 0.83, 0.67] }}
           className="relative z-10 flex flex-col items-center justify-center h-full w-full text-center"
         >
           {/* Floating badge */}
@@ -88,7 +89,7 @@ export default function Home() {
           >
             I craft scalable, user-friendly web applications with modern technologies. 
             Specializing in <span className="text-blue-400 font-medium">React</span>, <span className="text-blue-400 font-medium">Next.js</span>, and <span className="text-blue-400 font-medium">TypeScript</span> 
-            to deliver exceptional digital experiences.
+              <span> </span>to deliver exceptional digital experiences.
           </motion.div>
 
           {/* CTA Buttons */}
@@ -160,7 +161,7 @@ export default function Home() {
         id="my-projects"
         className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 pt-8 sm:pt-12 md:pt-16"
       >
-        <div className="flex flex-col lg:flex-row h-full w-full">
+        <div className="flex flex-col lg:flex-row h-full w-full items-stretch">
           {/* Left Side - My Projects */}
           <motion.div
             className="flex-1 flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-16 pb-8 lg:pb-0"
@@ -189,7 +190,7 @@ export default function Home() {
                 <motion.div 
                   key={project.title} 
                   variants={itemVariants}
-                  className="group bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-0 shadow-2xl border border-zinc-700 flex flex-col overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-2"
+                  className="group bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-0 shadow-2xl border border-zinc-700 flex flex-col overflow-hidden hover:border-blue-100/50 transition-all duration-500 hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-2"
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -254,7 +255,7 @@ export default function Home() {
 
           {/* Right Side - Liquid Chrome Component */}
           <motion.div
-            className="flex-1 h-64 sm:h-80 md:h-96 lg:h-full min-h-[500px] lg:min-h-[600px] relative"
+            className="flex-1 min-h-[400px] lg:min-h-[600px] relative flex items-center justify-center bg-zinc-900 border border-black"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
