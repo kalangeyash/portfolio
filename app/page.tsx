@@ -186,7 +186,6 @@ export default function Home() {
                 A showcase of my latest work, featuring modern web applications built with cutting-edge technologies.
               </p>
             </div>
-            
             <motion.div 
               variants={containerVariants}
               initial="hidden"
