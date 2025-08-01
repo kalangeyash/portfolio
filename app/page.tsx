@@ -99,17 +99,20 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <a  href="/projects"> 
+            <a  href="/project" > 
             <RippleButton
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+              className = "flex   bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105   gap-2"
               rippleColor="#fff"
               
             >
+              <div className="flex gap-1 items-center">
               <Code2 className="w-5 h-5" />
-              View My Work
+              
+                View My Work
+              </div>
             </RippleButton>
             </a>
-            <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center gap-2">
+            <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 px-10 rounded-full transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch
             </button>

@@ -8,7 +8,7 @@ export default function ProjectPage() {
         <h1 className="text-white text-4xl font-bold mb-8">All Projects</h1>
         <div className="grid  grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((project) => (
-            <div key={project.title} className="bg-zinc-900  rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden">
+            <div key={project.title} className="bg-zinc-900  rounded-xl p-0 shadow-lg border border-zinc-800 flex flex-col overflow-hidden hover:border-blue-100/50 transition-all duration-500 hover:shadow-grey -500/20 hover:shadow-2xl hover:-translate-y-2">
               <Image
                 src={project.image}
                 alt={project.alt}
