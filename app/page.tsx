@@ -138,7 +138,7 @@ export default function Home() {
       </div>
 
       {/* Skills Section with enhanced design */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5 bg-gradient-to-tl from-violet-700 to-blue-900">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
         </div>
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Silk />
         </div>
-        <div className="absolute inset-0 z-5 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        <div className="absolute inset-0 opacity-10  z-5 bg-gradient-to-tl from-violet-700 via-blue-900 to-slate-900" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-106 h-96 bg-blue-500 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-106 h-96 bg-purple-500 rounded-full blur-3xl" />
@@ -315,8 +315,7 @@ export default function Home() {
               Lets Create Something <span className="text-blue-400">Amazing</span>
             </div>
             <div className="text-gray-300 text-center mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-xl text-sm sm:text-base px-4 leading-relaxed">
-              I am always open to discussing new opportunities, collaborations, or just chatting about tech. 
-              Lets bring your ideas to life.
+              I am always open to discussing new opportunities, collaborations, or just chatting about tech. Lets bring your ideas to life.
             </div>
           </motion.div>
 
@@ -365,8 +364,10 @@ export default function Home() {
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 sm:py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-2 text-sm sm:text-base flex items-center justify-center gap-2"
                 rippleColor="#fff"
               >
+                <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5" />
                 Send Message
+                </div>
               </RippleButton>
             </form>
             
@@ -376,7 +377,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center gap-4">
                 <a 
-                  href="mailto:yashkalange@gmail.com" 
+                  href="mailto:yashkalange127@gmail.com" 
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 text-sm sm:text-base hover:underline"
                 >
                   <Mail className="w-4 h-4" />
