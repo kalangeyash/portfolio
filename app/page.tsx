@@ -99,13 +99,16 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
+            <a  href="/projects"> 
             <RippleButton
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
               rippleColor="#fff"
+              
             >
               <Code2 className="w-5 h-5" />
               View My Work
             </RippleButton>
+            </a>
             <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch
@@ -209,9 +212,9 @@ export default function Home() {
                       className="w-full h-32 sm:h-40 md:h-48 object-cover bg-zinc-800 rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ExternalLink className="w-6 h-6 text-white" />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="p-4 sm:p-6 flex flex-col flex-1">
                     <div className="text-white text-lg sm:text-xl md:text-2xl font-semibold mb-2 group-hover:text-blue-400 transition-colors duration-300">
