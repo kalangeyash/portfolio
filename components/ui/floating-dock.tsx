@@ -128,10 +128,20 @@ function IconContainer({
 
   useEffect(() => {
     // Get the Lenis instance from the provider
-    const lenisInstance = (window as unknown as { lenis: Lenis }).lenis;
-    if (lenisInstance) {
-      setLenis(lenisInstance);
-    }
+    const getLenisInstance = () => {
+      const lenisInstance = (window as unknown as { lenis: Lenis }).lenis;
+      if (lenisInstance) {
+        setLenis(lenisInstance);
+      }
+    };
+
+    // Try immediately
+    getLenisInstance();
+
+    // If not found, try again after a short delay
+    const timer = setTimeout(getLenisInstance, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = (e: React.MouseEvent) => {
@@ -140,12 +150,21 @@ function IconContainer({
       const targetId = href.substring(1);
       const targetElement = document.getElementById(targetId);
       
-      if (targetElement && lenis) {
-        const targetPosition = targetElement.offsetTop;
-        lenis.scrollTo(targetPosition, {
-          duration: 2,
-          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        });
+      if (targetElement) {
+        if (lenis) {
+          // Use Lenis for smooth scrolling
+          const targetPosition = targetElement.offsetTop;
+          lenis.scrollTo(targetPosition, {
+            duration: 2,
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          });
+        } else {
+          // Fallback to native smooth scrolling
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
       }
     }
   };

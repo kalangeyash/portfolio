@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Loader from "@/components/ui/loader";
 import { LenisProvider } from "@/components/ui/lenis-provider";
 import { FloatingDockDesktop } from "@/components/ui/floating-dock";
-import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2 } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconExchange, IconHome, IconNewSection } from "@tabler/icons-react";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -22,19 +22,19 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       ),
       href: "#home",
     },
-    {
-      title: "About",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#about",
-    },
+    // {
+    //   title: "About",
+    //   icon: (
+    //     <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "#about",
+    // },
     {
       title: "Projects",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#projects",
+      href: "#my-projects",
     },
     {
       title: "Contact",
@@ -56,6 +56,13 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/kalangeyash",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/yash-kalange/",
     },
   ];
 
