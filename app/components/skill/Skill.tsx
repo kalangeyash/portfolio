@@ -13,17 +13,17 @@ export interface SkillsShowcaseProps {
 
 export default function Skill({ skills }: SkillsShowcaseProps) {
     return (
-        <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
+        <section className="overflow-hidden px-3 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-32">
             <div className="relative mx-auto max-w-7xl">
-                <h2 className="text-xl font-semibold text-neutral-100 sm:text-4xl">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-neutral-100 mb-6 sm:mb-8 md:mb-10">
                     Skills
                 </h2>
                 {skills.map((section) => (
-                    <div key={section.sectionName} className="mt-4">
-                        <span className="text-xs font-semibold text-neutral-400 sm:text-sm">
+                    <div key={section.sectionName} className="mt-6 sm:mt-8 md:mt-10">
+                        <span className="text-xs sm:text-sm md:text-base font-semibold text-neutral-400 block mb-3 sm:mb-4">
                             {section.sectionName}
                         </span>
-                        <div className="mt-2 flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                             {section.skills.map((pill, index) => (
                                 <motion.div
                                     key={`lang-${index}`}
