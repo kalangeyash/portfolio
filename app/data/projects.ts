@@ -1,5 +1,5 @@
 import pencilpath from '@/public/projects/pencilpath.png'
-import devsCanvas from '@/public/projects/devsCanvas.png'
+import devsCanvas from '@/public/projects/devscanvas.png'
 import planner from '@/public/projects/planner.png'
 import sentinalbank from '@/public/projects/sentinal-bank.png'
 import zx from '@/public/projects/zx.png'
