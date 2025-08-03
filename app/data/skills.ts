@@ -15,17 +15,17 @@ import {
   // Languages
 import HtmlSvg from "../../public/icons/html.svg";
 import CssSvg from "../../public/icons/css.svg";
-import SassSvg from "../../public/icons/sass.svg";
+
 import JavascriptSvg from "../../public/icons/javascript.svg";
 import TypescriptSvg from "../../public/icons/typescript.svg";
-import PythonSvg from "../../public/icons/python.svg";
+
   
   // Libraries
 import ReactjsSvg from "../../public/icons/reactjs.svg";
-import SolidjsSvg from "../../public/icons/solidjs.svg";
+
 import ReduxSvg from "../../public/icons/redux.svg";
 import TailwindcssSvg from "../../public/icons/tailwindcss.svg";
-import MuiSvg from "../../public/icons/mui.svg";
+
 import ViteSvg from "../../public/icons/vite.svg";
   
   // Backend
@@ -53,10 +53,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "CSS",
                 icon: CssSvg,
         },
-        {
-          name: "SASS",
-          icon: SassSvg,
-        },
+        
         {
           name: "Javascript",
           icon: JavascriptSvg,
@@ -65,10 +62,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "Typescript",
           icon: TypescriptSvg,
         },
-        {
-          name: "Python",
-          icon: PythonSvg,
-        },
+
       ],
     },
     {
@@ -82,10 +76,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "Nextjs",
           icon: SiNextdotjs,
         },
-        {
-          name: "Solidjs",
-          icon: SolidjsSvg,
-        },
+
         {
           name: "React Router Dom",
           icon: ReactRouterDomIcon,
@@ -98,10 +89,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "Tailwindcss",
           icon: TailwindcssSvg,
         },
-        {
-          name: "MUI",
-          icon: MuiSvg,
-        },
+
         {
           name: "Framer motion",
           icon: FramerMotionIcon,
@@ -110,10 +98,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "Vite",
           icon: ViteSvg,
         },
-        {
-          name: "Vite PWA",
-          icon: VitePwaIcon,
-        },
+
       ],
     },
     {
@@ -127,14 +112,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "Express",
           icon: SiExpress,
         },
-        {
-          name: "Socket.io",
-          icon: SiSocketdotio,
-        },
-        {
-          name: "Flask",
-          icon: SiFlask,
-        },
+
       ],
     },
     {
