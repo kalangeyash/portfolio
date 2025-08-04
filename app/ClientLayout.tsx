@@ -10,7 +10,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -22,13 +22,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       ),
       href: "#home",
     },
-    // {
-    //   title: "About",
-    //   icon: (
-    //     <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    //   ),
-    //   href: "#about",
-    // },
+
     {
       title: "Projects",
       icon: (

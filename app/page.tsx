@@ -8,8 +8,9 @@ import Skill from "./components/skill/Skill";
 import { SKILLS_DATA } from "./data/skills";
 import { PROJECTS } from "./data/projects";
 import { RippleButton } from "../components/magicui/ripple-button";
-import { ArrowDown, ExternalLink, Mail, Github, Linkedin, Code2, Sparkles } from "lucide-react";
+import { ArrowDown, ExternalLink, Mail, Code2, Sparkles } from "lucide-react";
 import { circOut } from "framer-motion";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "./components/icons";
 
 export default function Home() {
   const containerVariants = {
@@ -376,18 +377,25 @@ export default function Home() {
                   Email
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/kalangeyash/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
-                  <Github className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <GithubIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   GitHub
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/yash-kalange/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
-                  <Linkedin className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <LinkedinIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   LinkedIn
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/yash-kalange/" 
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                >
+                  <TwitterIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                  Twitter (X)
                 </a>
               </div>
             </div>
