@@ -213,7 +213,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
-                    <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                    <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-emerald-400 transition-colors duration-300">
                       {project.title}
                     </div>
                     <div className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 flex-1 leading-relaxed">
@@ -223,7 +223,7 @@ export default function Home() {
                       {project.tech.map((tech) => (
                         <span 
                           key={tech} 
-                          className="bg-blue-900/50 text-blue-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium border border-blue-800/50 hover:bg-blue-800/50 transition-colors duration-200"
+                          className="bg-emerald-900/50 text-emerald-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium border border-emerald-800/50 hover:bg-emerald-800/50 transition-colors duration-200"
                         >
                           {tech}
                         </span>
@@ -233,7 +233,7 @@ export default function Home() {
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-blue-400 hover:text-blue-300 hover:underline mt-auto text-xs sm:text-sm md:text-base font-medium flex items-center gap-1 sm:gap-2 group-hover:gap-2 sm:group-hover:gap-3 transition-all duration-300"
+                      className="text-emerald-400 hover:text-emerald-300 hover:underline mt-auto text-xs sm:text-sm md:text-base font-medium flex items-center gap-1 sm:gap-2 group-hover:gap-2 sm:group-hover:gap-3 transition-all duration-300"
                     >
                       View Project
                       <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -252,7 +252,7 @@ export default function Home() {
             >
               <a 
                 href="/project" 
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base flex items-center gap-2"
+                className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base flex items-center gap-2"
               >
                 Explore All Projects
                 <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 rotate-[-90deg]" />
@@ -268,7 +268,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-blue-500/5 to-blue-500/10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-emerald-500/5 to-emerald-500/10 pointer-events-none" />
             <LiquidChrome 
               baseColor={[0.05, 0.05, 0.07]}
               speed={0.3}
@@ -288,8 +288,8 @@ export default function Home() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-purple-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-emerald-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-amber-500 rounded-full blur-3xl" />
         </div>
 
         <div className="flex flex-col items-center justify-center h-full w-full relative z-10">
@@ -300,12 +300,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-6 sm:mb-8 md:mb-12"
           >
-            <div className="text-blue-400 text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-2 tracking-wide uppercase text-center flex items-center justify-center gap-1.5 sm:gap-2">
+            <div className="text-emerald-400 text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-2 tracking-wide uppercase text-center flex items-center justify-center gap-1.5 sm:gap-2">
               <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               Get in Touch
             </div>
             <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 text-center">
-              Lets Create Something <span className="text-blue-400">Amazing</span>
+              Lets Create Something <span className="text-emerald-400">Amazing</span>
             </div>
             <div className="text-gray-300 text-center mb-6 sm:mb-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl text-xs sm:text-sm md:text-base px-3 sm:px-4 leading-relaxed">
               I am always open to discussing new opportunities, collaborations, or just chatting about tech. Lets bring your ideas to life.
@@ -317,7 +317,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-zinc-700/50 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-3 sm:mx-4 hover:border-blue-500/30 transition-all duration-500"
+            className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-zinc-700/50 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-3 sm:mx-4 hover:border-emerald-500/30 transition-all duration-500"
           >
             <form className="flex flex-col gap-3 sm:gap-4 md:gap-6">
               <div className="flex flex-col gap-1.5 sm:gap-2">
@@ -328,7 +328,7 @@ export default function Home() {
                   id="name"
                   type="text"
                   placeholder="Your Name"
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700/50 focus:border-blue-400 text-sm sm:text-base hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base hover:bg-zinc-700/50"
                   required
                 />
               </div>
@@ -338,7 +338,7 @@ export default function Home() {
                   id="email"
                   type="email"
                   placeholder="Your Email"
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700/50 focus:border-blue-400 text-sm sm:text-base hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base hover:bg-zinc-700/50"
                   required
                 />
               </div>

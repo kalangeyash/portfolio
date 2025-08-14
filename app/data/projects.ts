@@ -10,7 +10,7 @@ export const PROJECTS = [
     image: planner,
     alt: "AI Planner Preview",
     description: "AI-powered daily planning tool that helps users organize tasks and optimize productivity.",
-    tech: ["React", "TypeScript", "OpenAI API" ,"NodeJs", "MongoDB"],
+    tech: ["React", "TypeScript", "OpenAI API" ,"Node.js", "MongoDB"],
     link: "https://project-planner-ten-mu.vercel.app/",
   },
   {
