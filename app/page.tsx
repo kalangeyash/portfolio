@@ -347,14 +347,14 @@ export default function Home() {
                 <textarea
                   id="message"
                   placeholder="Tell me about your project..."
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-zinc-700/50 focus:border-blue-400 text-sm sm:text-base resize-vertical min-h-[100px] sm:min-h-[120px] hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base resize-vertical min-h-[100px] sm:min-h-[120px] hover:bg-zinc-700/50"
                   rows={4}
                   required
                 />
               </div>
               <RippleButton
                 type="submit"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-2 text-sm sm:text-base flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-2 text-sm sm:text-base flex items-center justify-center gap-2"
                 rippleColor="#fff"
               >
                 <div className="flex items-center gap-2">
@@ -371,28 +371,28 @@ export default function Home() {
               <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
                 <a 
                   href="mailto:yashkalange127@gmail.com" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
                   Email
                 </a>
                 <a 
                   href="https://github.com/kalangeyash/" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <GithubIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   GitHub
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/yash-kalange/" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <LinkedinIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   LinkedIn
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/yash-kalange/" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base hover:underline"
                 >
                   <TwitterIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   Twitter (X)

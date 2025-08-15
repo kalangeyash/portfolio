@@ -14,7 +14,7 @@ export const PROJECTS = [
     link: "https://project-planner-ten-mu.vercel.app/",
   },
   {
-    title: "DevsCanvas",
+    title: " DevsCanvas",
     image: devsCanvas,
     alt: "Realtime Code Editor",
     description: "A real-time collaborative platform for writing and testing codes in different programming languages",
