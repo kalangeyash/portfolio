@@ -36,7 +36,7 @@ export const PROJECTS = [
     description: "Pencil Path is a blogging website where users can write and share their thoughts and ideas.",
     tech: ["React", "Hono.js", "PostgreSQL" , "Cloudflare Worker"],
     link: "https://pencil-path-henna.vercel.app/",
-  },
+  }, 
   {
     title: "Sentinal Bank",
     image: sentinalbank,
