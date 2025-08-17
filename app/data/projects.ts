@@ -29,6 +29,8 @@ export const PROJECTS = [
     tech: ["React", "GSAP", "Tailwind CSS"],
     link: "https://zap-x.vercel.app/",
   },
+
+  
   {
     title: "Pencil Path ",
     image: pencilpath,
