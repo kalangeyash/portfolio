@@ -74,11 +74,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 leading-tight px-2"
           >
-            <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-[#F5E8D8] to-[#E0E0E0] bg-clip-text text-transparent">
               Yash Kalange
             </span>
             <br />
-            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-blue-400 font-light">
+            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#76ABAE] font-light">
               Computer Engineer
             </span>
           </motion.div>
@@ -90,7 +90,7 @@ export default function Home() {
             className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl px-3 sm:px-4 leading-relaxed mb-6 sm:mb-8 md:mb-10 lg:mb-12"
           >
             I craft scalable, user-friendly web applications with modern technologies. 
-            Specializing in <span className="text-blue-400 font-medium">React</span>, <span className="text-blue-400 font-medium">Next.js</span>, and <span className="text-blue-400 font-medium">TypeScript</span> 
+            Specializing in <span className="text-[#76ABAE] font-medium">React</span>, <span className="text-[#76ABAE] font-medium">Next.js</span>, and <span className="text-[#76ABAE] font-medium">TypeScript</span> 
               <span> </span>to deliver exceptional digital experiences.
           </motion.div>
 
@@ -103,7 +103,7 @@ export default function Home() {
           >
             <a href="/project" className="w-full sm:w-auto"> 
               <RippleButton
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 gap-2 text-sm sm:text-base"
+                className="w-full sm:w-auto bg-[#76ABAE] hover:bg-[#5A8A8D] text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 gap-2 text-sm sm:text-base"
                 rippleColor="#fff"
               >
                 <div className="flex gap-1 sm:gap-2 items-center justify-center">
@@ -142,10 +142,10 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Silk />
         </div>
-        <div className="absolute inset-0 opacity-10 z-5 bg-gradient-to-tl from-violet-700 via-blue-900 to-slate-900" />
+        <div className="absolute inset-0 opacity-10 z-5 bg-gradient-to-tl from-[#76ABAE] via-[#5A8A8D] to-slate-900" />
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-purple-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-[#76ABAE] rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-[#F5E8D8] rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 py-12 sm:py-16 md:py-20 lg:py-24 px-3 sm:px-6 md:px-8 lg:px-12">
           <motion.div
@@ -156,7 +156,7 @@ export default function Home() {
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
-              Technical <span className="text-blue-400">Expertise</span>
+              Technical <span className="text-[#76ABAE]">Expertise</span>
             </h2>
             <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl mx-auto px-3 sm:px-4">
               Proficient in modern web technologies and frameworks
@@ -181,7 +181,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">
-              Featured <span className="text-blue-400">Projects</span>
+              Featured <span className="text-[#76ABAE]">Projects</span>
             </div>
             <div className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl mb-6 sm:mb-8 text-center lg:text-left mx-auto lg:mx-0">
               <p className="mb-4 sm:mb-6">
@@ -200,7 +200,7 @@ export default function Home() {
                 <motion.div 
                   key={project.title} 
                   variants={itemVariants}
-                  className="group bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl sm:rounded-2xl p-0 shadow-2xl border border-zinc-700 flex flex-col overflow-hidden hover:border-blue-100/50 transition-all duration-500 hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-2"
+                  className="group bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl sm:rounded-2xl p-0 shadow-2xl border border-zinc-700 flex flex-col overflow-hidden hover:border-[#F5E8D8]/50 transition-all duration-500 hover:shadow-[#76ABAE]/20 hover:shadow-2xl hover:-translate-y-2"
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -213,7 +213,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
-                    <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-emerald-400 transition-colors duration-300">
+                    <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-[#F5E8D8] transition-colors duration-300">
                       {project.title}
                     </div>
                     <div className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 flex-1 leading-relaxed">
@@ -223,7 +223,7 @@ export default function Home() {
                       {project.tech.map((tech) => (
                         <span 
                           key={tech} 
-                          className="bg-emerald-900/50 text-emerald-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium border border-emerald-800/50 hover:bg-emerald-800/50 transition-colors duration-200"
+                          className="bg-[#F5E8D8]/20 text-[#F5E8D8] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium border border-[#F5E8D8]/30 hover:bg-[#F5E8D8]/30 transition-colors duration-200"
                         >
                           {tech}
                         </span>
@@ -233,7 +233,7 @@ export default function Home() {
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-emerald-400 hover:text-emerald-300 hover:underline mt-auto text-xs sm:text-sm md:text-base font-medium flex items-center gap-1 sm:gap-2 group-hover:gap-2 sm:group-hover:gap-3 transition-all duration-300"
+                      className="text-[#F5E8D8] hover:text-[#E0E0E0] hover:underline mt-auto text-xs sm:text-sm md:text-base font-medium flex items-center gap-1 sm:gap-2 group-hover:gap-2 sm:group-hover:gap-3 transition-all duration-300"
                     >
                       View Project
                       <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -252,7 +252,7 @@ export default function Home() {
             >
               <a 
                 href="/project" 
-                className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base flex items-center gap-2"
+                className="bg-gradient-to-r from-[#F5E8D8] to-[#E0E0E0] hover:from-[#E0E0E0] hover:to-[#F5E8D8] text-gray-800 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base flex items-center gap-2"
               >
                 Explore All Projects
                 <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 rotate-[-90deg]" />
@@ -268,7 +268,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-emerald-500/5 to-emerald-500/10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#F5E8D8]/5 to-[#F5E8D8]/10 pointer-events-none" />
             <LiquidChrome 
               baseColor={[0.05, 0.05, 0.07]}
               speed={0.3}
@@ -288,8 +288,8 @@ export default function Home() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-emerald-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-amber-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-[#F5E8D8] rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-[#76ABAE] rounded-full blur-3xl" />
         </div>
 
         <div className="flex flex-col items-center justify-center h-full w-full relative z-10">
@@ -300,12 +300,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-6 sm:mb-8 md:mb-12"
           >
-            <div className="text-emerald-400 text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-2 tracking-wide uppercase text-center flex items-center justify-center gap-1.5 sm:gap-2">
+            <div className="text-[#F5E8D8] text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-2 tracking-wide uppercase text-center flex items-center justify-center gap-1.5 sm:gap-2">
               <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               Get in Touch
             </div>
             <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 text-center">
-              Lets Create Something <span className="text-emerald-400">Amazing</span>
+              Lets Create Something <span className="text-[#F5E8D8]">Amazing</span>
             </div>
             <div className="text-gray-300 text-center mb-6 sm:mb-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl text-xs sm:text-sm md:text-base px-3 sm:px-4 leading-relaxed">
               I am always open to discussing new opportunities, collaborations, or just chatting about tech. Lets bring your ideas to life.
@@ -317,7 +317,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-zinc-700/50 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-3 sm:mx-4 hover:border-emerald-500/30 transition-all duration-500"
+            className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-zinc-700/50 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-3 sm:mx-4 hover:border-[#F5E8D8]/30 transition-all duration-500"
           >
             <form className="flex flex-col gap-3 sm:gap-4 md:gap-6">
               <div className="flex flex-col gap-1.5 sm:gap-2">
@@ -328,7 +328,7 @@ export default function Home() {
                   id="name"
                   type="text"
                   placeholder="Your Name"
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F5E8D8] transition-all border border-zinc-700/50 focus:border-[#F5E8D8] text-sm sm:text-base hover:bg-zinc-700/50"
                   required
                 />
               </div>
@@ -338,7 +338,7 @@ export default function Home() {
                   id="email"
                   type="email"
                   placeholder="Your Email"
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F5E8D8] transition-all border border-zinc-700/50 focus:border-[#F5E8D8] text-sm sm:text-base hover:bg-zinc-700/50"
                   required
                 />
               </div>
@@ -347,14 +347,14 @@ export default function Home() {
                 <textarea
                   id="message"
                   placeholder="Tell me about your project..."
-                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all border border-zinc-700/50 focus:border-emerald-400 text-sm sm:text-base resize-vertical min-h-[100px] sm:min-h-[120px] hover:bg-zinc-700/50"
+                  className="bg-zinc-800/50 backdrop-blur-sm text-white px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F5E8D8] transition-all border border-zinc-700/50 focus:border-[#F5E8D8] text-sm sm:text-base resize-vertical min-h-[100px] sm:min-h-[120px] hover:bg-zinc-700/50"
                   rows={4}
                   required
                 />
               </div>
               <RippleButton
                 type="submit"
-                className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-2 text-sm sm:text-base flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-[#F5E8D8] to-[#E0E0E0] hover:from-[#E0E0E0] hover:to-[#F5E8D8] text-gray-800 font-semibold py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-2 text-sm sm:text-base flex items-center justify-center gap-2"
                 rippleColor="#fff"
               >
                 <div className="flex items-center gap-2">
@@ -371,28 +371,28 @@ export default function Home() {
               <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
                 <a 
                   href="mailto:yashkalange127@gmail.com" 
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-[#F5E8D8] hover:text-[#E0E0E0] transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
                   Email
                 </a>
                 <a 
                   href="https://github.com/kalangeyash/" 
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-[#F5E8D8] hover:text-[#E0E0E0] transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <GithubIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   GitHub
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/yash-kalange/" 
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
+                  className="text-[#F5E8D8] hover:text-[#E0E0E0] transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base hover:underline"
                 >
                   <LinkedinIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   LinkedIn
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/yash-kalange/" 
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base hover:underline"
+                  className="text-[#F5E8D8] hover:text-[#E0E0E0] transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base hover:underline"
                 >
                   <TwitterIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                   Twitter (X)

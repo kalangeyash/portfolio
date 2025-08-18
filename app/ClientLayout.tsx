@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Loader from "@/components/ui/loader";
+import { usePathname } from "next/navigation";
 import { LenisProvider } from "@/components/ui/lenis-provider";
 import { FloatingDockDesktop } from "@/components/ui/floating-dock";
 import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconExchange, IconHome, IconNewSection } from "@tabler/icons-react";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 100);
@@ -65,7 +67,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   ) : (
     <LenisProvider>
       {children}
-      <FloatingDockDesktop items={links} />
+      {pathname === "/" && <FloatingDockDesktop items={links} />}
     </LenisProvider>
   );
 } 
