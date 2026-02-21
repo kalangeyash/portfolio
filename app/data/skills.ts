@@ -10,6 +10,7 @@ import {
   import { type SkillsShowcaseProps } from "../components/skill/Skill";
   
   // Languages
+  import java from "../../public/icons/Java.svg";
 import HtmlSvg from "../../public/icons/html.svg";
 import CssSvg from "../../public/icons/css.svg";
 
@@ -19,7 +20,7 @@ import TypescriptSvg from "../../public/icons/typescript.svg";
   
   // Libraries
 import ReactjsSvg from "../../public/icons/reactjs.svg";
-
+import SpringBoot from "../../public/icons/SpringBoot.svg"
 import ReduxSvg from "../../public/icons/redux.svg";
 import TailwindcssSvg from "../../public/icons/tailwindcss.svg";
 
@@ -31,17 +32,26 @@ import NodejsSvg from "../../public/icons/nodejs.svg";
   // Database and ORMS
 import MongoDBSvg from "../../public/icons/mongodb.svg";
 import PostgressSvg from "../../public/icons/postgresql.svg";
+import MySQL from "../../public/icons/MySQLgt.svg"
+
   
   // Tools and Tech
 import GitSvg from "../../public/icons/git.svg";
 import DockerSvg from "../../public/icons/docker.svg";
 import AwsSvg from "../../public/icons/aws.svg";
 import PostmanSvg from "../../public/icons/postman.svg";
+import Azure from "../../public/icons/Azure.svg";
+import K8 from "../../public/icons/Kubernetes.svg";
+import { Light } from "three";
   
   export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     {
       sectionName: "Languages",
       skills: [
+        {
+          name: "Java",
+          icon: java,
+        },
         {
           name: "HTML",
           icon: HtmlSvg,
@@ -78,10 +88,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
           name: "React Router Dom",
           icon: ReactRouterDomIcon,
         },
-        {
-          name: "Redux",
-          icon: ReduxSvg,
-        },
+        
         {
           name: "Tailwindcss",
           icon: TailwindcssSvg,
@@ -102,6 +109,10 @@ import PostmanSvg from "../../public/icons/postman.svg";
       sectionName: "Backend",
       skills: [
         {
+          name: "SpringBoot",
+          icon: SpringBoot,
+        },
+        {
           name: "Nodejs",
           icon: NodejsSvg,
         },
@@ -116,12 +127,16 @@ import PostmanSvg from "../../public/icons/postman.svg";
       sectionName: "Databases and ORMs",
       skills: [
         {
-          name: "MongoDB",
-          icon: MongoDBSvg,
+          name: "MySQL",
+          icon: MySQL,
         },
         {
-          name: "Postgress",
+          name: "PostgresSQL",
           icon: PostgressSvg,
+        },
+        {
+          name: "MongoDB",
+          icon: MongoDBSvg,
         },
         {
           name: "Prisma",
@@ -130,7 +145,7 @@ import PostmanSvg from "../../public/icons/postman.svg";
       ],
     },
     {
-      sectionName: "Tools and Technologies",
+      sectionName: "Tools & Technologies",
       skills: [
         {
           name: "Git",
@@ -143,6 +158,14 @@ import PostmanSvg from "../../public/icons/postman.svg";
         {
           name: "AWS",
           icon: AwsSvg,
+        },
+        {
+          name: "Azure",
+          icon: Azure,
+        },
+        {
+          name: "Kubernetes",
+          icon: K8,
         },
         {
           name: "Postman",

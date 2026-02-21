@@ -3,8 +3,17 @@ import devsCanvas from '@/public/projects/devscanvas.png'
 import planner from '@/public/projects/planner.png'
 import sentinalbank from '@/public/projects/sentinal-bank.png'
 import zx from '@/public/projects/zx.png'
+import bidbridge from '../../public/projects/bidbridge.png'
 
 export const PROJECTS = [
+  {
+    title: "BidBridge",
+    image: bidbridge,
+    alt: "BidBridge Preview",
+    description: "Tender and bidding management platform designed to streamline how buyers publish tenders and how vendors discover, evaluate, and submit bids",
+    tech: ["SpringBoot", "SpringSecurity", "JWT" ,"React", "Postgres"],
+    link: "https://bidbridge.vercel.app/",
+  },
   {
     title: "AI Planner",
     image: planner,
